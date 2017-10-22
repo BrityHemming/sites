@@ -1,0 +1,23 @@
+*{
+  border:1px solid grey;
+}
+body{
+  background-color:pink;
+  font-family: 'Lora', serif;
+}
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+}
+.special{
+  color:green;
+}
+#about{
+  background-color:grey;
+}
+.aboutTxt{
+  width:80%;
+  margin: 0 auto;
+}
+img{
+  width:50%;
+}

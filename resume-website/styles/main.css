@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+  border:1px solid grey;
+}
+html{
+  font-size:10rem;
+}
+body{
+  background-color:green;
+  font-family: 'Noto Sans', sans-serif;
+  line-height:1.5;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Rock Salt', cursive;
+  letter-spacing:3px;
+  font-size:4rem;
+}

@@ -1,0 +1,596 @@
+
+/* GENERAL STYLES */
+@font-face {
+    font-family:code-light;
+    src: url(fonts/webfonts/Code-Light.ttf.woff);
+}
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  /*border:1px solid green;*/
+}
+html{
+  font-size:80%;
+}
+body{
+  font-family: 'Space Mono', monospace;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: code-light;
+  color:#048a77;
+  padding:2%;
+  letter-spacing:4px;
+}
+h1{
+  font-size:4rem;
+  font-weight:bolder;
+}
+h2{
+  text-align:center;
+  font-size:3rem;
+}
+h3{
+  font-size:2.5rem;
+}
+a{
+  color:#048a77;
+  text-decoration:none;
+  letter-spacing:3px;
+  transition:1s;
+}
+a:hover{
+  color:#e49c5c;
+  text-decoration:underline;
+}
+p{
+  line-height:2;
+}
+ul li, ol li{
+  line-height: 2;
+}
+/*Header Styles*/
+.topSocial{
+  text-align:center;
+  background-color:#c5f584;
+}
+.topSocial a{
+  font-size:1rem;
+  padding-left:2%;
+  padding-right:2%;
+}
+.logoArea{
+  padding:2%;
+}
+.mainNav{
+  text-align:center;
+  padding:1%;
+  background-color:#c5f584;
+}
+.mainNav a{
+  padding-left:2%;
+  padding-right:2%;
+}
+/*HERO SECTION*/
+/* MOBILE MENU STYLES*/
+.mobShow{
+  display:none;
+}
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9999999999;
+  padding: 8px;
+}
+/*this is where you can chand the color of the buttons*/
+.burger-button span{
+  width: 25px;
+  border: 2px solid #048a77;
+  background-color: #048a77;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: #e49c5c;
+  background-color:#e49c5c;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: 02px;
+}
+
+.burger-bottom{
+  bottom: 02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+  transform: rotateZ(270deg);
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 99999999;
+}
+
+.burger-menu a {
+  text-decoration: none;
+  padding: 15px 11px;
+  font-size: 20px;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}
+.burger-menu a:hover{
+  color:#e49c5c;
+  text-decoration:underline;
+}
+.burger-menu li{list-style:none}
+/*
+.dropdown-nav:hover .dropdown-content {
+    display: block;
+} */
+/*END OF MOBILE MENU STYLES */
+.hero{
+  background-image:url('../images/backgroundimage.png');
+  text-align:center;
+  max-height:70vh;
+  height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.heroTxt{
+  width:50%;
+  background-color:rgba(228, 156, 94, 0.95);
+}
+/*OUR VISION SECTION */
+.vision{
+  background-color:#048a77;
+  padding:0;
+  margin:0;
+}
+.visionLeft{
+  padding:0;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.visionTxt h2{
+  padding:2%;
+  color:#e29d62;
+}
+.visionTxt{
+  width:80%;
+  margin:0 auto;
+}
+.visionTxtLink{
+ text-align:right;
+}
+.visionTxtLink a{
+  color:#e29d62;
+}
+.visionTxtLink a:hover{
+  color:#c8f481;
+}
+.visionRight{
+  padding:0;
+  margin:0;
+  margin-bottom:-5px;
+}
+.visionRight img{
+  width:100%;
+  padding:0;
+  margin:0;
+}
+/*WORKSHOPS SECTION*/
+.workshops{
+  text-align:center;
+  padding:2%;
+}
+.workshops h2{
+  padding-bottom:5%;
+}
+.workshopType{
+  padding:5%;
+  border:2px solid #e29d62;
+}
+.workshopType i{
+  font-size:80px;
+  padding-bottom:15%;
+  color:#048a77;
+}
+.workshopType h3{
+  padding-bottom:15%;
+}
+.workshopType a{
+  padding-bottom:10%;
+}
+.more{
+  text-align:right;
+  padding:2%;
+}
+.more a{
+  padding-right:2%;
+}
+/*GET INVOLVED SECTION */
+.GetInvolved{
+  background-color:#e29d62;
+  padding:5%;
+}
+.inForm{
+  width:80%;
+  margin:0 auto;
+}
+.interacForm p{
+  font-size:20px;
+  line-height:5;
+}
+.interacForm input{
+    background-color:#e29d62;
+    border:none;
+    border-bottom:1px dashed #c8f481;
+    width:20%;
+    font-size:20px;
+    text-align:center;
+    font-family: 'Space Mono', monospace;
+    color:#c8f481;
+    text-transform: lowercase;
+}
+.interacForm select{
+  background-color:#e29d62;
+  border:none;
+  border-bottom:1px dashed #c8f481;
+  width:30%;
+  font-size:20px;
+  text-align:center;
+  font-family: 'Space Mono', monospace;
+  color:#c8f481;
+}
+.interacForm button{
+  background-color:#c8f481;
+  color:#e29d62;
+  padding:2%;
+}
+.interacForm button:hover{
+  background-color:#048a77;
+  border:1px solid #048a77;
+}
+.interacForm button i{
+  font-size:20px;
+}
+.interacForm input:focus{
+  outline:none;
+  border-bottom:1px dashed #c8f481;
+}
+.interacForm input:active{
+  outline:none;
+  border-bottom:1px dashed #c8f481;
+}
+.interacForm input[type=email]{
+  padding:0;
+  width:20%;
+  font-size:20px;
+  color:#c8f481 !important;
+}
+
+/*FOOTER STYLES*/
+footer{
+  background-color:#048a77;
+}
+footer h2, footer h3, footer a{
+  color:#e29d62;
+}
+footer a:hover{
+  color:#c8f481;
+}
+.footerContainer{
+  padding:4%;
+}
+.BottomSocial{
+  padding-top:3%;
+}
+.BottomSocial a{
+  padding-left:2%;
+  padding-right:2%;
+}
+.BottomSocial a:hover{
+  color:#c8f481;
+}
+.copy{
+  margin-left:2%;
+}
+.siteMap{
+  display:flex;
+  flex-direction:column;
+}
+/*FORM SYTLING */
+input[type=email]{
+width: 65%;
+padding: 1.5%;
+margin-top: 2%;
+margin-bottom: 2%;
+font-family:'Space Mono', monospace;
+font-size:12px;
+}
+button{
+  font-family:'Space Mono', monospace;
+  font-size:12px;
+  padding:2.5%;
+  background-color:#e29d62;
+  border:2px solid #e29d62;
+  color:#048a77;
+  transition:1s;
+}
+button:hover{
+  background-color: #c8f481;
+  border:2px solid #c8f481;
+}
+
+/*////////////////////////////////////////////////Workshops Page/////////////////////////////////////////////////*/
+.workshopIntro h2{
+  background-color:rgba(4, 137, 117, 0.8);
+  font-weight:bold;
+  color:#e29d62;
+}
+.workshopIntro h2:hover{
+  color:#048a77;
+  background-color:rgba(228, 156, 94, 0.95);
+}
+.pastLeft{
+  height:70vh;
+  width:100%;
+  background-image:url('../images/workshop1.jpg');
+  background-size:cover;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.presentRight{
+  height:70vh;
+  width:100%;
+  background-image:url('../images/workshop3.jpg');
+  background-size:cover;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+/*Past Workshops*/
+.pimg img{
+  width:100%;
+}
+.pimg{
+  margin:0;
+  padding:0;
+}
+.ptext{
+  width:80%;
+  padding:0;
+  margin:0 auto;
+}
+.ptextContainer{
+  margin:0;
+  padding:0;
+}
+
+/*SKILLS*/
+.teach{
+  padding:5% 2%;
+  background-color:#048975;
+}
+.teach h2{
+  color:#e29a5b;
+}
+.pimg{
+  margin-bottom:-7px;
+}
+.skillz{
+  background-image:url('../images/skillztextbg.jpg');
+  background-size:cover;
+  width:100%;
+}
+.skillzTxt{
+  width:80%;
+  margin:0 auto;
+  background-color:rgba(226, 154, 91, 0.7);
+  padding:2%;
+  margin-bottom:-16px;
+}
+.listSkillz{
+  text-align:center;
+  color:#e29d62;
+}
+.listSkillz i{
+  font-size:40px;
+}
+.listSkillz h4{
+  color:#e29d62;
+}
+.workshopForm{
+  background-color:#e29d62;
+  padding:7%;
+}
+.formContainer{
+  width:90%;
+  margin:0 auto;
+}
+
+/*/////////////////////////////////////////////////GET INVOLVED PAGE STYLES////////////////////////////////*/
+.applyButtonContainer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+.ways{
+  padding-top:3%;
+  padding-bottom:0;
+  margin-bottom:-21px;
+}
+.upcomingImg img{
+  max-width:100%;
+}
+.upcomingTxt p{
+  width:90%;
+  margin:0 auto;
+}
+
+/*///////////////////////CAREERS PAGE///////////////////////*/
+.careers{
+  width:80%;
+  margin:0 auto;
+  padding-top:3%;
+  padding-bottom:3%;
+}
+.careers h1, .careers h2, .careers h3{
+  text-align:center;
+}
+/*/////////////////ABOUT PAGE STYLES ////////////////////////*/
+.about{
+  width:90%;
+  margin:0 auto;
+  padding-top:3%;
+  padding-bottom:3%;
+}
+.about img{
+  width:40%;
+}
+.aboutTxt{
+  padding-top:3%;
+}
+.aboutimg{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+
+/*Scholarship page*/
+
+.scholarshipContainer section{
+  padding:2% 0 2% 0;
+}
+section.scholarshipSponsors{
+  padding:0;
+}
+section.apply, section.mentorrw{
+  text-align:center;
+  background-color:#e29a5b;
+  padding-bottom:0;
+}
+
+.apply .applyButton{
+  margin-top:5%;
+}
+.mentorrw .applyButton{
+  margin-top:5%;
+}
+.scholarshipTop{
+  background-image:url('../images/scholarshipbanner.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  height:70vh;
+}
+.applyButton{
+  display:inline-block;
+  border:2px solid #048a77;
+  margin-bottom:2%;
+  text-align:center;
+  background-color: #fff;
+}
+.applyButton:hover{
+  background-color:#c5f584;
+}
+.hoverExcep:hover{
+  color:#c5f584;
+}
+.scholarshipContainer section.career{
+  margin:0;
+  background-color:#048a77;
+}
+.Container{
+  margin:0 10% 3% 10%;
+}
+section.scholarshipSponsors{
+  padding:2% 0;
+}
+.sponsorlogos{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.career h2{
+  color:#e29a5b;
+}
+.rwskill{
+  margin:3% 0;
+  text-align:center;
+}
+.rwskill i{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.rwskill i:hover{
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+/*MEDIA QUERIES*/
+@media only screen and ( max-width: 768px) {
+  .mainNav{
+    display:none;
+  }
+  .mobShow{
+    display:block;
+  }
+  h1{
+    font-size:30px;
+  }
+  h2{
+    font-size:25px;
+    }
+    h3, h4, h5, h6{
+    font-size:20px;
+  }
+
+}
